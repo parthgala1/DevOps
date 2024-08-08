@@ -1,0 +1,128 @@
+:root {
+  --primary-color: #4a90e2;
+  --background-dark: #1f1f1f;
+  --background-light: #f7f7f7;
+  --input-background: #333333;
+  --button-background-dark: #2a2a2a;
+  --button-background-light: #e0e0e0;
+  --text-dark: #e0e0e0;
+  --text-light: #333333;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--text-dark);
+  background-color: var(--background-dark);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: linear-gradient(135deg, #1a1a1a, #292929);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 80vw;
+  max-width: 500px;
+  padding: 5em 2.5em;
+  border-radius: 15px;
+  background-color: var(--input-background);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1.5em;
+}
+
+input {
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  width: 100%;
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  background-color: #2d2d2d;
+  color: var(--text-dark);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0px 0px 8px var(--primary-color);
+}
+
+h1 {
+  font-size: 2.4em;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 1em;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: var(--button-background-dark);
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.25s, box-shadow 0.25s;
+}
+
+button:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-light);
+    background-color: var(--background-light);
+  }
+
+  .App {
+    background-color: #ffffff;
+  }
+
+  input {
+    background-color: #f0f0f0;
+    color: var(--text-light);
+  }
+
+  button {
+    background-color: var(--button-background-light);
+    color: var(--text-light);
+  }
+
+  button:hover {
+    border-color: var(--primary-color);
+  }
+}
